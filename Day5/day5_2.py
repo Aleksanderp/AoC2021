@@ -12,14 +12,9 @@ with open("day5_2.txt", "r") as dat:
         p2 = tuple(map(lambda x: int(x), points[1].split(",")))
         lines.append((Point(p1), Point(p2)))
 
-N = 1000
+N = 1000 # input numbers are < 1000 and we can afford that kind of space :D
 diagonal = True
 grid = [[0 for i in range(N)] for j in range(N)]
-
-def ordered(a, b):
-    if a > b:
-        return (b, a)
-    return (a, b)
 
 def count_intersects(grid, x, x_step, y, y_step, steps):
     new_intersects = 0
