@@ -8,4 +8,4 @@ with open("day7_1.txt", "r") as dat:
             fuel_cost[pos] += abs(pos - pos_two)
         if minimal is None or fuel_cost[pos] < minimal:
             minimal = fuel_cost[pos]
-print(min(fuel_cost.values()))
+print(minimal)
