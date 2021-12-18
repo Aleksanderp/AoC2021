@@ -43,7 +43,7 @@ def y_hits_target(speed, upper, lower):
 def y_speed_min_max_steps(y_bound):
     y_valid = []
     max_y = 0
-    for y_initial in range(y_bound[0], 1000):
+    for y_initial in range(y_bound[0], abs(y_bound[0]) +1):
         steps, y = y_hits_target(y_initial, y_bound[1], y_bound[0])
         if len(steps) > 0:
             if y > max_y:
